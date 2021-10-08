@@ -1,4 +1,5 @@
 ﻿@page "/fetchdata"
+@attribute [Authorize(Policy = "MustBeAdmin")]
 
 @using WebApplication.Data
 @inject WeatherForecastService ForecastService
