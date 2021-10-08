@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using WebApplication.Authentication;
 using WebApplication.Data;
 using WebApplication.Data.Impl;
+using WebApplication.Data.Impl.Adults;
 
 namespace LoginExample {
 public class Startup {
@@ -23,7 +24,7 @@ public class Startup {
     public void ConfigureServices(IServiceCollection services) {
         services.AddRazorPages();
         services.AddServerSideBlazor();
-        services.AddSingleton<WeatherForecastService>();
+        services.AddSingleton<IAdults, AdultsData>();
         services.AddScoped<IUserService, InMemoryUserService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
