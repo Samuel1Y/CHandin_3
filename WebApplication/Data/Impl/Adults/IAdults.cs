@@ -8,7 +8,7 @@ namespace WebApplication.Data.Impl.Adults
     {
         IList<Adult> GetAdults();
         void AddAdult(Adult adult);
-        void RemoveAdult(Adult adult);
+        void RemoveAdult(int adultId);
         void Update(Adult adult);
         Adult Get(int id);
     }

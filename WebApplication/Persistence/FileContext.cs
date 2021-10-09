@@ -28,26 +28,31 @@ namespace FileData
             }
         }
 
-        public void SaveChanges()
+        public void SaveChanges<T>(IList<T> list, bool isFamily)
         {
-            // storing families
-            string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions
+            if (isFamily)
             {
-                WriteIndented = true
-            });
-            using (StreamWriter outputFile = new StreamWriter(familiesFile, false))
-            {
-                outputFile.Write(jsonFamilies);
+                // storing families
+                string jsonFamilies = JsonSerializer.Serialize(list, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+                using (StreamWriter outputFile = new StreamWriter(familiesFile, false))
+                {
+                    outputFile.Write(jsonFamilies);
+                }
             }
-
-            // storing persons
-            string jsonAdults = JsonSerializer.Serialize(Adults, new JsonSerializerOptions
+            else
             {
-                WriteIndented = true
-            });
-            using (StreamWriter outputFile = new StreamWriter(adultsFile, false))
-            {
-                outputFile.Write(jsonAdults);
+                // storing persons
+                string jsonAdults = JsonSerializer.Serialize(list, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+                using (StreamWriter outputFile = new StreamWriter(adultsFile, false))
+                {
+                    outputFile.Write(jsonAdults);
+                }
             }
         }
     }

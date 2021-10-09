@@ -1,5 +1,6 @@
 ﻿@page "/Adults"
 @using System.Collections
+@using System.ComponentModel.DataAnnotations
 @using global::Models
 @using WebApplication.Data
 @using WebApplication.Models
@@ -115,5 +116,5 @@ else
         adults = AdultsData.GetAdults();
         adultsToShow = adults;
     }
-
+    
 }

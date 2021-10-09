@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using FileData;
 using Models;
 
@@ -9,10 +10,11 @@ namespace WebApplication.Data.Impl.Adults
     public class AdultsData : IAdults
     {
         private IList<Adult> adults;
+        private FileContext fileContext;
 
         public AdultsData()
         {
-            FileContext fileContext = new FileContext();
+            fileContext = new FileContext();
             adults = fileContext.Adults;
         }
         public IList<Adult> GetAdults()
@@ -23,12 +25,17 @@ namespace WebApplication.Data.Impl.Adults
 
         public void AddAdult(Adult adult)
         {
-            throw new System.NotImplementedException();
+            int max = adults.Max(adult => adult.Id);
+            adult.Id = (++max);
+            adults.Add(adult);
+            fileContext.SaveChanges(adults,false);
         }
 
-        public void RemoveAdult(Adult adult)
+        public void RemoveAdult(int adultId)
         {
-            throw new System.NotImplementedException();
+            Adult adultToRemove = adults.First(a => a.Id == adultId);
+            adults.Remove(adultToRemove);
+            fileContext.SaveChanges(adults,false);
         }
 
         public void Update(Adult adult)
