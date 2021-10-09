@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\terez\\.nuget\\packages\\": {}
+    "C:\\Users\\samue\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\terez\\RiderProjects\\CHandIn2\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "C:\\Users\\terez\\RiderProjects\\CHandIn2\\WebApplication\\WebApplication.csproj",
-      "packagesPath": "C:\\Users\\terez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\terez\\RiderProjects\\CHandIn2\\WebApplication\\obj\\",
+      "projectPath": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj",
+      "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\terez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

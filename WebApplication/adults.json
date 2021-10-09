@@ -2,14 +2,14 @@
   {
     "JobTitle": {
       "JobTitle": "Mascot",
-      "Salary": 99821
+      "Salary": 99950
     },
     "Id": 0,
     "FirstName": "Yasmine",
     "LastName": "Baxter",
     "HairColor": "Black",
     "EyeColor": "Brown",
-    "Age": 58,
+    "Age": 59,
     "Weight": 39.8,
     "Height": 174,
     "Sex": "F"
@@ -148,21 +148,6 @@
     "Weight": 102.5,
     "Height": 164,
     "Sex": "F"
-  },
-  {
-    "JobTitle": {
-      "JobTitle": "Casino Host",
-      "Salary": 35445
-    },
-    "Id": 10,
-    "FirstName": "Lester",
-    "LastName": "Cruz",
-    "HairColor": "White",
-    "EyeColor": "Amber",
-    "Age": 39,
-    "Weight": 126.2,
-    "Height": 179,
-    "Sex": "M"
   },
   {
     "JobTitle": {

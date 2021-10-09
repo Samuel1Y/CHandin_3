@@ -67,6 +67,7 @@ else
                 <td>@item.Sex</td>
                 <td>@item.JobTitle.JobTitle</td>
                 <td>@item.JobTitle.Salary</td>
+                <AuthorizeView Policy="MustBeAdmin">
                 <td>
                     <button @onclick="@(() => Edit(item.Id))">
                         <i class="oi oi-pencil" style="color:#1b6ec2"/>
@@ -77,6 +78,7 @@ else
                         <i class="oi oi-trash" style="color:red"/>
                     </button>
                 </td>
+                </AuthorizeView>
             </tr>
         }
         </tbody>

@@ -15,11 +15,6 @@ namespace WebApplication.Data.Impl
                     UserName = "AdminExample",
                     Password = "123456",
                     Role = "Admin"
-                },
-                new User {
-                    UserName = "VisitorExample",
-                    Password = "123456",
-                    Role = "Visitor"
                 }
             }.ToList();
         }

@@ -1,5 +1,4 @@
-using System;
-using System.Security.Claims;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -18,9 +17,7 @@ public class Startup {
     }
 
     public IConfiguration Configuration { get; }
-
-    // This method gets called by the runtime. Use this method to add services to the container.
-    // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+    
     public void ConfigureServices(IServiceCollection services) {
         services.AddRazorPages();
         services.AddServerSideBlazor();
@@ -33,26 +30,15 @@ public class Startup {
             options.AddPolicy("MustBeAdmin", a =>
                 a.RequireAuthenticatedUser().RequireClaim("Role", "Admin"));
 
-            options.AddPolicy("MustBeVisitor",  a => 
-                a.RequireAuthenticatedUser().RequireClaim("Role", "Visitor"));
-            
-            /*options.AddPolicy("SecurityLevel2", policy =>
-                policy.RequireAuthenticatedUser().RequireAssertion(context => {
-                    Claim levelClaim = context.User.FindFirst(claim => claim.Type.Equals("Level"));
-                    if (levelClaim == null) return false;
-                    return int.Parse(levelClaim.Value) >= 2;
-                }));*/
         });
     }
 
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
         if (env.IsDevelopment()) {
             app.UseDeveloperExceptionPage();
         } else {
             app.UseExceptionHandler("/Error");
 
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
 
