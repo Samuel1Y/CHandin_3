@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,12 +41,14 @@ namespace WebApplication.Data.Impl.Adults
 
         public void Update(Adult adult)
         {
-            throw new System.NotImplementedException();
+            int index = adults.IndexOf(adults.First(a => a.Id == adult.Id));
+            adults[index] = adult;
+            fileContext.SaveChanges(adults, false);
         }
 
         public Adult Get(int id)
         {
-            throw new System.NotImplementedException();
+            return adults.First(a => a.Id == id);
         }
     }
 }

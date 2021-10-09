@@ -1,0 +1,105 @@
+﻿@page "/Edit/{Id:int}"
+@using WebApplication.Models
+@using WebApplication.Data
+@using WebApplication.Data.Impl.Adults
+@using Microsoft.AspNetCore.Components
+@using global::Models
+@inject IAdults AdultsData
+@inject NavigationManager NavMgr
+<h3>Edit adult with id:@Id</h3>
+@if (adultToEdit == null)
+{
+    <em>Todo not found!</em>
+}
+else
+{
+    <EditForm Model="@adultToEdit" OnValidSubmit="@Save">
+        <DataAnnotationsValidator/> 
+        <ValidationSummary/>
+        <div class="form-group">
+                First Name:<br/> 
+                <InputTextArea rows="1" @bind-Value="adultToEdit.FirstName">
+                    @adultToEdit.FirstName
+                </InputTextArea>
+            </div>
+            <div class="form-group">
+                Last Name:<br/> 
+                <InputTextArea rows="1" @bind-Value="adultToEdit.LastName">
+                     @adultToEdit.LastName
+                </InputTextArea>
+            </div>
+            <div class="form-group">
+                Hair Color:<br/> 
+                <InputTextArea rows="1" @bind-Value="adultToEdit.HairColor">
+                    @adultToEdit.HairColor
+                 </InputTextArea>
+            </div>
+            <div class="form-group">
+                Eye Color:<br/> 
+                <InputTextArea rows="1" @bind-Value="adultToEdit.EyeColor">
+                     @adultToEdit.EyeColor
+                </InputTextArea>
+            </div>
+            <div class="form-group">
+                Age:<br/> 
+                <InputNumber rows="1" @bind-Value="adultToEdit.Age">
+                    @adultToEdit.Age
+                </InputNumber>
+            </div>
+            <div class="form-group">
+                Weight:<br/> 
+                <InputNumber rows="1" @bind-Value="adultToEdit.Weight">
+                @adultToEdit.Weight
+                </InputNumber>
+            </div>
+            <div class="form-group">
+                Height:<br/> 
+                <InputNumber rows="1" @bind-Value="adultToEdit.Height">
+                @adultToEdit.Height
+                </InputNumber>
+            </div>
+            <div class="form-group">
+                Sex:<br/> 
+                <InputSelect rows="1" @bind-Value="adultToEdit.Sex">
+                    <option>Non</option>
+                    <option>F</option>
+                    <option>M</option>
+                </InputSelect>
+                @adultToEdit.Sex
+            </div>
+            <div class="form-group">
+                Job Title:<br/> 
+                <InputTextArea rows="1" @bind-Value="adultToEdit.JobTitle.JobTitle">
+                    @adultToEdit.JobTitle.JobTitle
+                </InputTextArea>
+            </div>
+            <div class="form-group">
+                Job Salary:<br/> 
+                <InputNumber rows="1" @bind-Value="adultToEdit.JobTitle.Salary">
+                @adultToEdit.JobTitle.Salary
+                </InputNumber>
+            </div>
+            <p class="actions">
+                <button class="btn btn-outline-dark" type="submit">Edit</button>
+            </p>
+        </EditForm>
+}
+
+@code
+{
+    [Parameter]
+    public int Id { get; set; }
+
+    private Adult adultToEdit;
+
+    protected override async Task OnInitializedAsync()
+    {
+        adultToEdit = AdultsData.Get(Id);
+    }
+
+    private void Save()
+    {
+        AdultsData.Update(adultToEdit);
+        NavMgr.NavigateTo("/Adults");
+    }
+}
