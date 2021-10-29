@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj": {}
+    "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj": {
+    "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\WebApplication.csproj",
         "projectName": "WebApplication",
-        "projectPath": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\WebApplication.csproj",
+        "projectPath": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\WebApplication.csproj",
         "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samue\\RiderProjects\\CHandInnew\\WebApplication\\obj\\",
+        "outputPath": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
