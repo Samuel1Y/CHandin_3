@@ -9,7 +9,7 @@ namespace WebApplication.Data.Impl.Adults
     {
         Task<IList<Adult>> GetAdultsAsync();
         Task<Adult>   AddAdultAsync(Adult adult);
-        Task   RemoveAdultAsync(int todoId);
+        Task   RemoveAdultAsync(int Id);
         Task<Adult> UpdateAdultAsync(Adult adult);
     }
 }
