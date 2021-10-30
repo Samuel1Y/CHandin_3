@@ -18,65 +18,65 @@ else
         <ValidationSummary/>
         <div class="form-group">
                 First Name:<br/> 
-                <InputTextArea rows="1" @bind-Value="adultToEdit.FirstName">
-                    @adultToEdit.FirstName
+                <InputTextArea rows="1" @bind-Value="adultToEdit.firstName">
+                    @adultToEdit.firstName
                 </InputTextArea>
             </div>
             <div class="form-group">
                 Last Name:<br/> 
-                <InputTextArea rows="1" @bind-Value="adultToEdit.LastName">
-                     @adultToEdit.LastName
+                <InputTextArea rows="1" @bind-Value="adultToEdit.lastName">
+                     @adultToEdit.lastName
                 </InputTextArea>
             </div>
             <div class="form-group">
                 Hair Color:<br/> 
-                <InputTextArea rows="1" @bind-Value="adultToEdit.HairColor">
-                    @adultToEdit.HairColor
+                <InputTextArea rows="1" @bind-Value="adultToEdit.hairColor">
+                    @adultToEdit.hairColor
                  </InputTextArea>
             </div>
             <div class="form-group">
                 Eye Color:<br/> 
-                <InputTextArea rows="1" @bind-Value="adultToEdit.EyeColor">
-                     @adultToEdit.EyeColor
+                <InputTextArea rows="1" @bind-Value="adultToEdit.eyeColor">
+                     @adultToEdit.eyeColor
                 </InputTextArea>
             </div>
             <div class="form-group">
                 Age:<br/> 
-                <InputNumber rows="1" @bind-Value="adultToEdit.Age">
-                    @adultToEdit.Age
+                <InputNumber rows="1" @bind-Value="adultToEdit.age">
+                    @adultToEdit.age
                 </InputNumber>
             </div>
             <div class="form-group">
                 Weight:<br/> 
-                <InputNumber rows="1" @bind-Value="adultToEdit.Weight">
-                @adultToEdit.Weight
+                <InputNumber rows="1" @bind-Value="adultToEdit.weight">
+                @adultToEdit.weight
                 </InputNumber>
             </div>
             <div class="form-group">
                 Height:<br/> 
-                <InputNumber rows="1" @bind-Value="adultToEdit.Height">
-                @adultToEdit.Height
+                <InputNumber rows="1" @bind-Value="adultToEdit.height">
+                @adultToEdit.height
                 </InputNumber>
             </div>
             <div class="form-group">
                 Sex:<br/> 
-                <InputSelect rows="1" @bind-Value="adultToEdit.Sex">
+                <InputSelect rows="1" @bind-Value="adultToEdit.sex">
                     <option>Non</option>
                     <option>F</option>
                     <option>M</option>
                 </InputSelect>
-                @adultToEdit.Sex
+                @adultToEdit.sex
             </div>
             <div class="form-group">
                 Job Title:<br/> 
-                <InputTextArea rows="1" @bind-Value="adultToEdit.JobTitle.JobTitle">
-                    @adultToEdit.JobTitle.JobTitle
+                <InputTextArea rows="1" @bind-Value="adultToEdit.jobTitle.jobTitle">
+                    @adultToEdit.jobTitle.jobTitle
                 </InputTextArea>
             </div>
             <div class="form-group">
                 Job Salary:<br/> 
-                <InputNumber rows="1" @bind-Value="adultToEdit.JobTitle.Salary">
-                @adultToEdit.JobTitle.Salary
+                <InputNumber rows="1" @bind-Value="adultToEdit.jobTitle.salary">
+                @adultToEdit.jobTitle.salary
                 </InputNumber>
             </div>
             <p class="actions">
@@ -94,7 +94,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        adultToEdit = AdultsData.Get(Id);
+        adultToEdit = await AdultsData.GetAsync(Id);
     }
 
     private void Save()

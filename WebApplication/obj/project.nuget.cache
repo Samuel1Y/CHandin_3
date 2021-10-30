@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UOEhwCiQGj2X7M8WePlFAqSfO5A5kBawzhhDSaB159vvQG+UhRK5aINUfRJScOy+GNx9Pgf2lPpX96ZDNUy6Wg==",
+  "dgSpecHash": "J04xnW3MENI26mf33Pz+U/bfbQwHHSxOkJ0mNF7uftOxiorZTnvYHYuWNIc/TNY5RqpLp7z34r+IJkQd8CiHBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebApplication\\WebApplication.csproj",
+  "projectFilePath": "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WebApplication.Models;
 
 namespace WebApplication.Data.Impl
@@ -20,7 +21,7 @@ namespace WebApplication.Data.Impl
         }
 
 
-        public User ValidateUser(string userName, string password) {
+        public async Task<User> ValidateUser(string userName, string password) {
             User first = users.FirstOrDefault(user => user.UserName.ToLower().Equals(userName.ToLower()));
             if (first == null) {
                 throw new Exception("User not found");

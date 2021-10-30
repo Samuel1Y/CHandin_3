@@ -56,25 +56,25 @@ else
         @foreach (var item in adultsToShow)
         {
             <tr>
-                <td>@item.Id</td>
-                <td>@item.FirstName</td>
-                <td>@item.LastName</td>
-                <td>@item.HairColor</td>
-                <td>@item.EyeColor</td>
-                <td>@item.Age</td>
-                <td>@item.Weight</td>
-                <td>@item.Height</td>
-                <td>@item.Sex</td>
-                <td>@item.JobTitle.JobTitle</td>
-                <td>@item.JobTitle.Salary</td>
+                <td>@item.id</td>
+                <td>@item.firstName</td>
+                <td>@item.lastName</td>
+                <td>@item.hairColor</td>
+                <td>@item.eyeColor</td>
+                <td>@item.age</td>
+                <td>@item.weight</td>
+                <td>@item.height</td>
+                <td>@item.sex</td>
+                <td>@item.jobTitle.jobTitle</td>
+                <td>@item.jobTitle.salary</td>
                 <AuthorizeView Policy="MustBeAdmin">
                 <td>
-                    <button @onclick="@(() => Edit(item.Id))">
+                    <button @onclick="@(() => Edit(item.id))">
                         <i class="oi oi-pencil" style="color:#1b6ec2"/>
                     </button>
                 </td>
                 <td>
-                    <button @onclick="@(() => RemoveAdult(item.Id))">
+                    <button @onclick="@(() => RemoveAdult(item.id))">
                         <i class="oi oi-trash" style="color:red"/>
                     </button>
                 </td>
@@ -124,12 +124,12 @@ else
 
     private void ExecuteFilter()
     {
-        adultsToShow = adults.Where(t => (filterByName != null && t.GetFullName().ToLower().Contains(filterByName.ToLower()) || filterByName == null) && (filterBySex != null && t.Sex == filterBySex || filterBySex == null)).ToList();
+        adultsToShow = adults.Where(t => (filterByName != null && t.GetFullName().ToLower().Contains(filterByName.ToLower()) || filterByName == null) && (filterBySex != null && t.sex == filterBySex || filterBySex == null)).ToList();
     }
 
     protected override async Task OnInitializedAsync()
     {
-        adults = AdultsData.GetAdults();
+        adults = await AdultsData.GetAdultsAsync();
         adultsToShow = adults;
     }
     
@@ -140,8 +140,8 @@ else
 
     private void RemoveAdult(int itemId)
     {
-        Adult adultToRemove = adults.First(a => a.Id == itemId);
-        AdultsData.RemoveAdult(itemId);
+        Adult adultToRemove = adults.First(a => a.id == itemId);
+        AdultsData.RemoveAdultAsync(itemId);
         adults.Remove(adultToRemove);
         adultsToShow.Remove(adultToRemove);
     }

@@ -11,35 +11,35 @@
     <DataAnnotationsValidator/> <ValidationSummary/>
     <div class="form-group">
         First Name:<br/> 
-        <InputTextArea rows="1" @bind-Value="newAdultItem.FirstName"/>
+        <InputTextArea rows="1" @bind-Value="newAdultItem.firstName"/>
     </div>
     <div class="form-group">
         Last Name:<br/> 
-        <InputTextArea rows="1" @bind-Value="newAdultItem.LastName"/>
+        <InputTextArea rows="1" @bind-Value="newAdultItem.lastName"/>
     </div>
     <div class="form-group">
         Hair Color:<br/> 
-        <InputTextArea rows="1" @bind-Value="newAdultItem.HairColor"/>
+        <InputTextArea rows="1" @bind-Value="newAdultItem.hairColor"/>
     </div>
     <div class="form-group">
         Eye Color:<br/> 
-        <InputTextArea rows="1" @bind-Value="newAdultItem.EyeColor"/>
+        <InputTextArea rows="1" @bind-Value="newAdultItem.eyeColor"/>
     </div>
     <div class="form-group">
         Age:<br/> 
-        <InputNumber rows="1" @bind-Value="newAdultItem.Age"/>
+        <InputNumber rows="1" @bind-Value="newAdultItem.age"/>
     </div>
     <div class="form-group">
         Weight:<br/> 
-        <InputNumber rows="1" @bind-Value="newAdultItem.Weight"/>
+        <InputNumber rows="1" @bind-Value="newAdultItem.weight"/>
     </div>
     <div class="form-group">
         Height:<br/> 
-        <InputNumber rows="1" @bind-Value="newAdultItem.Height"/>
+        <InputNumber rows="1" @bind-Value="newAdultItem.height"/>
     </div>
     <div class="form-group">
         Sex:<br/> 
-        <InputSelect rows="1" @bind-Value="newAdultItem.Sex">
+        <InputSelect rows="1" @bind-Value="newAdultItem.sex">
             <option>Non</option>
             <option>F</option>
             <option>M</option>
@@ -47,11 +47,11 @@
     </div>
     <div class="form-group">
         Job Title:<br/> 
-        <InputTextArea rows="1" @bind-Value="newAdultItem.JobTitle.JobTitle"/>
+        <InputTextArea rows="1" @bind-Value="newAdultItem.jobTitle.jobTitle"/>
     </div>
     <div class="form-group">
         Job Salary:<br/> 
-        <InputNumber rows="1" @bind-Value="newAdultItem.JobTitle.Salary"/>
+        <InputNumber rows="1" @bind-Value="newAdultItem.jobTitle.salary"/>
     </div>
     <p class="actions">
         <button class="btn btn-outline-dark" type="submit">Create</button>
@@ -63,7 +63,7 @@
 
     private void AddNewAdult()
     {
-        AdultData.AddAdult(newAdultItem);
+        AdultData.AddAdultAsync(newAdultItem);
         NavigationManager.NavigateTo("/Adults");
     }
 

@@ -1,6 +1,6 @@
 namespace Models {
 public class Adult : Person
 {
-    public Job JobTitle { get; set; } = new Job();
+    public Job jobTitle { get; set; } = new Job();
 }
 }

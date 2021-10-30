@@ -9,6 +9,8 @@ using WebApplication.Authentication;
 using WebApplication.Data;
 using WebApplication.Data.Impl;
 using WebApplication.Data.Impl.Adults;
+using WebApplication.Data.Impl.UserD;
+using IUserService = WebApplication.Data.Impl.Adults.IUserService;
 
 namespace LoginExample {
 public class Startup {
@@ -21,8 +23,8 @@ public class Startup {
     public void ConfigureServices(IServiceCollection services) {
         services.AddRazorPages();
         services.AddServerSideBlazor();
-        services.AddSingleton<IAdults, AdultsData>();
-        services.AddScoped<IUserService, InMemoryUserService>();
+        services.AddSingleton<IAdults, CloudAdultService>();
+        services.AddScoped<IUserService, UserWebService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
         services.AddAuthorization(options =>

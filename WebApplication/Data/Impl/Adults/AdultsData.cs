@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using FileData;
 using Models;
 
@@ -18,37 +19,37 @@ namespace WebApplication.Data.Impl.Adults
             fileContext = new FileContext();
             adults = fileContext.Adults;
         }
-        public IList<Adult> GetAdults()
+        public async Task<IList<Adult>> GetAdultsAsync()
         {
             List<Adult> list = new List<Adult>(adults);
             return list;
         }
 
-        public void AddAdult(Adult adult)
+        public async Task AddAdultAsync(Adult adult)
         {
-            int max = adults.Max(adult => adult.Id);
-            adult.Id = (++max);
+            int max = adults.Max(adult => adult.id);
+            adult.id = (++max);
             adults.Add(adult);
             fileContext.SaveChanges(adults,false);
         }
 
-        public void RemoveAdult(int adultId)
+        public async Task RemoveAdultAsync(int adultId)
         {
-            Adult adultToRemove = adults.First(a => a.Id == adultId);
+            Adult adultToRemove = adults.First(a => a.id == adultId);
             adults.Remove(adultToRemove);
             fileContext.SaveChanges(adults,false);
         }
 
-        public void Update(Adult adult)
+        public async Task Update(Adult adult)
         {
-            int index = adults.IndexOf(adults.First(a => a.Id == adult.Id));
+            int index = adults.IndexOf(adults.First(a => a.id == adult.id));
             adults[index] = adult;
             fileContext.SaveChanges(adults, false);
         }
 
-        public Adult Get(int id)
+        public async Task<Adult> GetAsync(int id)
         {
-            return adults.First(a => a.Id == id);
+            return adults.First(a => a.id == id);
         }
     }
 }

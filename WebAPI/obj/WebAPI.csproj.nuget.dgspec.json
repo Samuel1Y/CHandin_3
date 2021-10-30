@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samue\\RiderProjects\\CHandin_2\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\terez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\terez\\RiderProjects\\CHandin_WebApi\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\terez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

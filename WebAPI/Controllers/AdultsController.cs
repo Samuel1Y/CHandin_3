@@ -21,16 +21,16 @@ namespace WebAPI.Controllers
         //GET
         [HttpGet]
         public async Task<ActionResult<IList<Adult>>>
-            GetAdults([FromQuery] int? userId, [FromQuery] string? FirstName,[FromQuery] string? LastName,
+            GetAdults([FromQuery] int? UserId, [FromQuery] string? FirstName,[FromQuery] string? LastName,
                       [FromQuery] string? HairColor,[FromQuery] string? EyeColor,[FromQuery] int? age,
                       [FromQuery] int? Weight, [FromQuery] int? height, [FromQuery] string? Sex, [FromQuery] Job? JobTitle)
         {
             try
             {
                 IList<Adult> adults = await this.adults.GetAdultsAsync();
-                if (userId != null)
-                {
-                    adults = adults.Where(adult => adult.Id == userId).ToList();
+                if (UserId != null)
+                { 
+                    adults = adults.Where(adult => adult.Id == UserId).ToList();
                 }
 
                 return Ok(adults);

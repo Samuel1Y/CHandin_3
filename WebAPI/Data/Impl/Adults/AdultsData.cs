@@ -12,7 +12,7 @@ namespace WebApplication.Data.Impl.Adults
     public class AdultsData : IAdults
     {
         private IList<Adult> adults;
-        private string adultFile = "Adults.json";
+        private string adultFile = "adults.json";
 
         public AdultsData()
         {
