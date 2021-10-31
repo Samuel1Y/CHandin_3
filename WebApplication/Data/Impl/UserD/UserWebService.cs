@@ -10,7 +10,7 @@ namespace WebApplication.Data.Impl.UserD
 {
     public class UserWebService: IUserService
     {
-        public async Task<Models.User> ValidateLogin(string username, string password)
+        public async Task<User> ValidateLogin(string username, string password)
             {
                 HttpClient client = new HttpClient();
                 HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/users?username={username}&password={password}");
