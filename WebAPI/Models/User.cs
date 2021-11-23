@@ -1,8 +1,12 @@
-﻿namespace WebApplication.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication.Models
 {
     public class User
     {
+        [Key]
         public string UserName { get; set; }
+        
         public string Domain { get; set; }
         public string City { get; set; }
         public int BirthYear { get; set; }

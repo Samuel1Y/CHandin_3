@@ -13,119 +13,119 @@ namespace WebApplication.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 1 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 2 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 3 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 4 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 5 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 6 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 7 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 8 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 9 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using WebApplication;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\_Imports.razor"
+#line 10 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\_Imports.razor"
 using WebApplication.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 2 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using System.Collections;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 3 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using System.ComponentModel.DataAnnotations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 4 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using global::Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 5 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using WebApplication.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 6 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using WebApplication.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 7 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using Microsoft.AspNetCore.Mvc.Filters;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 8 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
 using WebApplication.Data.Impl.Adults;
 
 #line default
@@ -140,7 +140,7 @@ using WebApplication.Data.Impl.Adults;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 89 "C:\Users\terez\RiderProjects\CHandin_WebApi\WebApplication\Pages\Adults.razor"
+#line 89 "C:\Users\samue\RiderProjects\CHandin_3\WebApplication\Pages\Adults.razor"
        
     private IList<Adult> adultsToShow;
     private IList<Adult> adults;
