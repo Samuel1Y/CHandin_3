@@ -10,12 +10,14 @@ namespace WebAPI.Migrations
                 name: "Job",
                 columns: table => new
                 {
-                    JobTitle = table.Column<string>(type: "TEXT", nullable: false),
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    JobTitle = table.Column<string>(type: "TEXT", nullable: true),
                     Salary = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Job", x => x.JobTitle);
+                    table.PrimaryKey("PK_Job", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -41,7 +43,7 @@ namespace WebAPI.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    JobTitle1 = table.Column<string>(type: "TEXT", nullable: true),
+                    JobTitleid = table.Column<int>(type: "INTEGER", nullable: true),
                     FirstName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 70, nullable: false),
                     HairColor = table.Column<string>(type: "TEXT", nullable: true),
@@ -55,17 +57,17 @@ namespace WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_Adults", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Adults_Job_JobTitle1",
-                        column: x => x.JobTitle1,
+                        name: "FK_Adults_Job_JobTitleid",
+                        column: x => x.JobTitleid,
                         principalTable: "Job",
-                        principalColumn: "JobTitle",
+                        principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Adults_JobTitle1",
+                name: "IX_Adults_JobTitleid",
                 table: "Adults",
-                column: "JobTitle1");
+                column: "JobTitleid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
