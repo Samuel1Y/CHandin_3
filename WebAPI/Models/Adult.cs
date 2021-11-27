@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Models {
+namespace WebAPI.Models {
 public class Adult : Person
 {
     public Job JobTitle { get; set; } = new Job();

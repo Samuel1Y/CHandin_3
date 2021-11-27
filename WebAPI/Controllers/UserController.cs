@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication.Data.Impl;
-using WebApplication.Models;
+using WebAPI.Data.Impl.Users;
+using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Models;
-using WebApplication.Models;
+using WebAPI.Models;
 
 public class DBContext : DbContext
 {

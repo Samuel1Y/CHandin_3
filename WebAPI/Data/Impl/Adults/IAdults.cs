@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Models;
+using WebAPI.Models;
 
-namespace WebApplication.Data.Impl.Adults
+namespace WebAPI.Data.Impl.Adults
 {
     public interface IAdults
     {

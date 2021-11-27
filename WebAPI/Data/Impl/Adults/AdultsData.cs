@@ -5,49 +5,37 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Models;
+using Microsoft.EntityFrameworkCore;
+using WebAPI.Models;
 
-namespace WebApplication.Data.Impl.Adults
+namespace WebAPI.Data.Impl.Adults
 {
     public class AdultsData : IAdults
     {
         private IList<Adult> adults;
-        private string adultFile = "adults.json";
+        private DBContext ctx;
 
         public AdultsData()
         {
-            if (!File.Exists(adultFile))
-            {
-                Seed();
-                WriteAdultsToFile();
-            }
-            else
-            {
-                string content = File.ReadAllText(adultFile);
-                adults = JsonSerializer.Deserialize<List<Adult>>(content);
-            }
+            ctx = new DBContext();
         }
 
         public async Task<IList<Adult>> GetAdultsAsync()
         {
-            List<Adult> tmp = new List<Adult>(adults);
-            return tmp;
+            return await ctx.getAllAdults();
         }
 
         public async Task<Adult> AddAdultAsync(Adult adult)
-        {
-            int max = adults.Max(a => a.Id);
-            adult.Id = (++max);
-            adults.Add(adult);
-            WriteAdultsToFile();
+        { 
+            await ctx.Adults.AddAsync(adult);
+            await ctx.SaveChangesAsync();
             return adult;
         }
 
         public async Task RemoveAdultAsync(int adultId)
         {
-            Adult toRemove = adults.First(t => t.Id == adultId);
-            adults.Remove(toRemove);
-            WriteAdultsToFile();
+            ctx.Adults.Remove(ctx.Adults.Single(a => a.Id == adultId));
+            await ctx.SaveChangesAsync();
         }
 
         /*public async Task GetAdult(int id)
@@ -70,16 +58,11 @@ namespace WebApplication.Data.Impl.Adults
             toUpdate.Sex = adult.Sex;
             toUpdate.JobTitle = adult.JobTitle;
 
-            WriteAdultsToFile();
+            ctx.Adults.Update(toUpdate);
+            await ctx.SaveChangesAsync();
             return toUpdate;
         }
-
-        private void WriteAdultsToFile()
-        {
-            string productsAsJson = JsonSerializer.Serialize(adults);
-
-            File.WriteAllText(adultFile, productsAsJson);
-        }
+        
 
         private void Seed()
         {

@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Models;
-using WebApplication.Models;
+using WebAPI.Models;
 
 namespace WebAPI
 {

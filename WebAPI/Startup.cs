@@ -11,8 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using WebApplication.Data.Impl;
-using WebApplication.Data.Impl.Adults;
+using WebAPI.Data.Impl.Users;
+using WebAPI.Data.Impl.Adults;
 
 namespace WebAPI
 {

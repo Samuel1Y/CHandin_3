@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http.Features;
 
-namespace Models {
+namespace WebAPI.Models {
 public class Person {
     public int Id { get; set; }
     

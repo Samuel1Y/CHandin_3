@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using WebApplication.Models;
+using WebAPI.Models;
 
-namespace WebApplication.Data.Impl
+namespace WebAPI.Data.Impl.Users
 {
     public interface IUserService
     {
